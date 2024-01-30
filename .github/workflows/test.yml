@@ -21,9 +21,6 @@ jobs:
       with:
         node-version: '16'
 
-    - name: Change to frontend directory
-      run: cd /d/Guest/devops\ Class/new/devops-class/all_in_docker/client
-
     - name: Install dependencies
       run: npm install
 
