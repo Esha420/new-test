@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: all_in_docker/server
+        working-directory: all_in_docker/client
 
     steps:
     - name: Checkout Repository
@@ -23,7 +23,6 @@ jobs:
 
     - name: Install dependencies
       run: npm install
-
 
     - name: Build Application
       run: |
