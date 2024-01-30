@@ -1,0 +1,34 @@
+name: yml test
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./all_in_docker/client
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '14'
+
+    - name: Change to frontend directory
+      run: cd /d/Guest/devops\ Class/new/devops-class/all_in_docker/client
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build the frontend (replace with your build command)
+      run: npm run build
+
+    - name: Start the frontend
+      run: npm start
