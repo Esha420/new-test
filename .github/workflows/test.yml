@@ -19,7 +19,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '14'
+        node-version: '16'
 
     - name: Change to frontend directory
       run: cd /d/Guest/devops\ Class/new/devops-class/all_in_docker/client
